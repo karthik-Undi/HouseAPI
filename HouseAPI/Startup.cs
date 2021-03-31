@@ -35,7 +35,7 @@ namespace HouseAPI
        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Resident API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "House API", Version = "v1" });
             });
             services.AddControllers();
 
@@ -43,7 +43,7 @@ namespace HouseAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -58,11 +58,11 @@ namespace HouseAPI
             {
                 endpoints.MapControllers();
             });
-
+            loggerFactory.AddLog4Net();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "House API V1");
             });
 
         }

@@ -23,13 +23,20 @@ namespace HouseAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> PostHouse(HouseList item)
         {
-            _log4net.Info("Post House is called !!");
+            _log4net.Info("Post House Was Called !!");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var addHouse = await _context.PostHouse(item);
-            return Ok(addHouse);
+            try
+            {
+                var addHouse = await _context.PostHouse(item);
+                return Ok(addHouse);
+            }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
         }
     }
 

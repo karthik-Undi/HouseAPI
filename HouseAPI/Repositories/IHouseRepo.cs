@@ -10,5 +10,6 @@ namespace HouseAPI.Repositories
     {
         Task<HouseList> PostHouse(HouseList item);
         IEnumerable<HouseList> GetFreeHouses();
+        Task<HouseList> UpdateIsFreeHouse(int? id);
     }
 }

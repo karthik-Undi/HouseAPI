@@ -45,5 +45,13 @@ namespace HouseAPI.Repositories
             }
             return house;
         }
+
+        public async Task<HouseList> UpdateIsFreeHouse(int? id)
+        {
+            HouseList house = await _context.HouseList.FindAsync(id);
+            house.IsFree = "Occupied";
+            await _context.SaveChangesAsync();
+            return house;
+        }
     }
 }

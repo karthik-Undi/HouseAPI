@@ -45,6 +45,27 @@ namespace HouseAPI.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpPost("{id}")]
+        public async Task<IActionResult> UpdateIsFreeHouse(Residents resident)
+        {
+            int houseNo = (int)resident.ResidentHouseNo;
+            _log4net.Info("Update Is Free Was Called !!");
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var updateIsFree = await _context.UpdateIsFreeHouse(houseNo);
+                _log4net.Info("Update Is Free for House No. " + resident.ResidentHouseNo + " Was Called !!");
+                return Ok(updateIsFree);
+            }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 
 }

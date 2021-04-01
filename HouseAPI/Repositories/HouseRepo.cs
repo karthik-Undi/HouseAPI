@@ -20,6 +20,11 @@ namespace HouseAPI.Repositories
             _context = context;
         }
 
+        public IEnumerable<HouseList> GetFreeHouses()
+        {
+            var freeHouse = _context.HouseList.Where(house => house.IsFree == "Free").ToList();
+            return freeHouse;
+        }
 
         public async Task<HouseList> PostHouse(HouseList item)
         {

@@ -20,6 +20,13 @@ namespace HouseAPI.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public IEnumerable<HouseList> GetFreeHouses()
+        {
+            _log4net.Info("Get Houses Which Are Free Was Called !!");
+            return _context.GetFreeHouses();
+        }
+
         [HttpPost]
         public async Task<IActionResult> PostHouse(HouseList item)
         {

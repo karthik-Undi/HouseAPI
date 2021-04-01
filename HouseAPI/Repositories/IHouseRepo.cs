@@ -9,5 +9,6 @@ namespace HouseAPI.Repositories
     public interface IHouseRepo
     {
         Task<HouseList> PostHouse(HouseList item);
+        IEnumerable<HouseList> GetFreeHouses();
     }
 }

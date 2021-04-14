@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseAPI", "HouseAPI\HouseAPI.csproj", "{C71DEE62-7F0B-451C-869E-B49964A2F3E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseAPI", "HouseAPI\HouseAPI.csproj", "{C71DEE62-7F0B-451C-869E-B49964A2F3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseNunitTest", "HouseNunitTest\HouseNunitTest.csproj", "{A153C900-9A62-4680-8970-42FA91212632}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C71DEE62-7F0B-451C-869E-B49964A2F3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C71DEE62-7F0B-451C-869E-B49964A2F3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C71DEE62-7F0B-451C-869E-B49964A2F3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A153C900-9A62-4680-8970-42FA91212632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A153C900-9A62-4680-8970-42FA91212632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A153C900-9A62-4680-8970-42FA91212632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A153C900-9A62-4680-8970-42FA91212632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
